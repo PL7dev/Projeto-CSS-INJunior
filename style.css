@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+:root {
+    --cor-fundo: #f0f0f0;
+    --cor-card: #ffffff;
+    --cor-texto: #333333;
+    --cor-header-footer: #4CAF50;
+    --cor-botao: #008CBA;
+    --cor-botao-hover: #005f73;
+    --espacamento: 20px;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--cor-header-footer);
+    padding: var(--espacamento);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+header a:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+main {
+    padding: var(--espacamento);
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.secao-perfil {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espacamento);
+}
+
+.secao-perfil img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--cor-card);
+    border: 5px solid white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.secao-perfil p {
+    max-width: 800px;
+    text-align: justify;
+}
+
+.listas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.grupo-lista h2 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.grupo-lista ul, .grupo-lista ol {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.grupo-lista li {
+    background-color: var(--cor-card);
+    padding: 15px;
+    border-radius: 8px;
+    width: 100px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.grupo-lista ol {
+    counter-reset: my-counter;
+}
+
+.grupo-lista ol li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.grupo-lista ol li::before {
+    counter-increment: my-counter;
+    content: counter(my-counter);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--cor-header-footer);
+}
+
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--cor-fundo);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    align-self: flex-end;
+    padding: 10px 30px;
+    background-color: var(--cor-botao);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+footer {
+    background-color: var(--cor-header-footer);
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+@media (min-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "content"
+            "footer";
+    }
+
+    header {
+        grid-area: header;
+        background-color: var(--cor-header-footer); 
+        justify-content: flex-end; 
+    }
+
+    main {
+        grid-area: content;
+        padding: 40px;
+    }
+
+    .secao-perfil {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .secao-perfil h2 {
+        display: none;
+    }
+
+    .listas-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .grupo-lista {
+        width: 48%;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+}

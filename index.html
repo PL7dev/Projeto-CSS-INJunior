@@ -8,40 +8,39 @@
 </head>
 <body>
     <header>
-        <h1>Pedro Lucas Motta, O Tonho</h1>
-        <a href="./main.html">Voltar à página principal</a>
+        <h1>Pedro Lucas</h1> <nav>
+            <a href="./main.html">Voltar</a>
+            <a href="#">Link</a> 
+            <a href="#">Link</a>
+        </nav>
     </header>
 
     <main>
-        <section>
-            <h2>Foto do dev mais bonito do trio</h2>
-            <img
-                src="./assets/pedro-profile-picture.png"
-                alt="Selfie de um jovem rapaz de cabelos castanhos"
-                style="width: 250px;">
-        </section>
-        <section>
-            <h2>Apresentação de Pedro, mais um pobre dev</h2>
-            <p>
-                Olá, meu nome completo é Pedro Lucas Alcantara da Motta, tenho 26 anos e estou indo, neste semestre, em 2026.1, para o 3º (ou 4º, talvez 5º) período de Sistemas da Computação na UFF. <br> <br>
-                Não sou muito fã de frontend, mas sempre estou animado para aprender mais sobre o assunto, mesmo quando não é o que mais gosto. O que me chama atenção é brilhar por trás do panos com um ótimo e poderoso <strong>backend</strong>, afinal, estar atrás das camêras também é importante para o ator, não? <br> <br>
-                Fora do computador, sou fã de esportes, pratico judô desde os 6 anos, jiu-jitsu desde os 13, já me aventurei por alguns anos no muay thai e no boxe. Tento jogar futebol, mas não sou muito bom, dizem que canhotos são habilidosos, se for verdade, tenho duas pernas direitas. Também adoro música, arte e tudo que possa ter um significado por trás. <br> <br>
-                Sinceramente, estou ansioso para a próxima etapa. Espero ver todos vocês em breve!
-            </p>
-        </section>
-        <section>
+        <section class="secao-perfil">
+            <img src="./assets/pedro-profile-picture.png" alt="Selfie de um jovem rapaz">
             <div>
-                <h2>5 hobbies, em qualquer ordem</h2>
+                <h2>Olá, sou o Pedro</h2>
+                <p>
+                    Olá, meu nome completo é Pedro Lucas Alcantara da Motta, tenho 26 anos e estou indo, neste semestre, em 2026.1, para o 3º (ou 4º, talvez 5º) período de Sistemas da Computação na UFF.
+                    Não sou muito fã de frontend, mas sempre estou animado para aprender mais sobre o assunto, mesmo quando não é o que mais gosto. O que me chama atenção é brilhar por trás do panos com um ótimo e poderoso backend, afinal, estar atrás das camêras também é importante para o ator, não?
+                    Sinceramente, estou ansioso para a próxima etapa. Espero ver todos vocês em breve! 
+                </p>
+            </div>
+        </section>
+
+        <section class="listas-container">
+            <div class="grupo-lista">
+                <h2>5 hobbies</h2>
                 <ul>
                     <li>Lutar no tatame</li>
-                    <li>Tomar cerveja e whisky</li>
-                    <li>Jogar videogame</li>
+                    <li>Tomar uma</li>
+                    <li>Videogame</li>
                     <li>Comer muito</li>
-                    <li>Sair com minha esposa e meus amigos</li>
+                    <li>Sair com amigos</li>
                 </ul>
             </div>
-            <div>
-                <h2>Top 5 melhores jogadores de futebol da história</h2>
+            <div class="grupo-lista">
+                <h2>Top 5 Jogadores</h2>
                 <ol>
                     <li>Cristiano Ronaldo</li>
                     <li>Pelé</li>
@@ -51,31 +50,20 @@
                 </ol>
             </div>
         </section>
+
         <form>
-            <h2>Feedbacks para PL</h2>
-            <label for="input_name">Nome Completo</label> <br>
-            <input
-                type="text"
-                id="input_name"
-                placeholder="Nome Completo..."
-                required> <br> <br>
-            <textarea
-                id="feedback_area"
-                placeholder="Feedback..."
-                cols="50"
-                rows="6"
-                style="resize: none;"
-                required></textarea> <br> <br>
-            <button type="submit">ENVIAR</button>
+            <h2>Feedbacks</h2>
+            <input type="text" id="input_name" placeholder="Digite seu nome aqui" required>
+            <textarea id="feedback_area" placeholder="Dê um feedback para esse desenvolvedor!" rows="6" style="resize: none;" required></textarea>
+            <button type="submit">Enviar</button>
         </form>
     </main>
 
     <footer>
-        <h2>Redes Sociais</h2>
         <nav>
-            <a href="https://github.com/PL7dev" target="_blank">GitHub</a> <br>
-            <a href="https://www.linkedin.com/in/pl-alcantara/" target="_blank">LinkedIn</a> <br>
-            <a href="./pedro-contato.html">Contato - Pedro</a>
+            <a href="https://github.com/PL7dev" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/pl-alcantara/" target="_blank">LinkedIn</a>
+            <a href="./pedro-contato.html">Contato</a>
         </nav>
     </footer>
 </body>
