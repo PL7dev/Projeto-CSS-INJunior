@@ -25,7 +25,6 @@ header {
     background-color: var(--cor-header-footer);
     padding: var(--espacamento);
     display: flex;
-    justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
@@ -33,6 +32,7 @@ header {
 }
 
 header h1 {
+    margin-right: auto;
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -137,22 +137,19 @@ main {
 }
 
 form {
-    background-color: white;
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
     gap: 15px;
-    max-width: 800px;
-    margin: 0 auto;
+    margin-left: 0;
     width: 100%;
 }
 
 form input, form textarea {
     width: 100%;
     padding: 15px;
-    background-color: var(--cor-fundo);
+    background-color: var(--cor-card);
     border: none;
     border-radius: 5px;
     font-size: 1rem;
