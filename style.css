@@ -128,12 +128,24 @@ main {
     color: var(--cor-header-footer);
 }
 
+.grupo-lista li:hover .img-card {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.grupo-lista li:hover .img-card img {
+    transform: scale(1.05);
+}
+
 .img-card {
     width: 100%;
     height: 100%;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: 
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .img-card img {
@@ -141,6 +153,7 @@ main {
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.35s ease
 }
 
 form {
