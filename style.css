@@ -83,13 +83,22 @@ main {
 
 .listas-container {
     display: flex;
-    flex-direction: column;
-    gap: 40px;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
 .grupo-lista h2 {
     margin-bottom: 15px;
     font-size: 1.2rem;
+    min-height: 2.5rem;
+}
+
+.grupo-lista:first-child h2 {
+    text-align: right;
+}
+
+.grupo-lista:last-child h2 {
+    text-align: left;
 }
 
 .grupo-lista ul, .grupo-lista ol {
