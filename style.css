@@ -114,7 +114,6 @@ main {
     position: relative;
 }
 
-/* NÚMERO SOBRE A IMAGEM */
 .grupo-lista ol li::before {
     counter-increment: my-counter;
     content: counter(my-counter);
@@ -264,10 +263,7 @@ footer a {
         flex-direction: row;
         align-items: flex-start;
         text-align: left;
-    }
-
-    .secao-perfil h2 {
-        display: none;
+        background-color: var(--cor-card);
     }
 
     .listas-container {
