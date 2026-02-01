@@ -294,6 +294,13 @@ footer {
 
 footer .redes-sociais img {
     filter: invert(1) brightness(1.1);
+    opacity: 0.8;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+footer .redes-sociais a:hover img {
+    opacity: 1;
+    transform: translateY(-2px);
 }
 
 @media (min-width: 768px) {
