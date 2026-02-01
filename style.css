@@ -49,6 +49,21 @@ header a:hover {
     background-color: rgba(0,0,0,0.1);
 }
 
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
 main {
     padding: var(--espacamento);
     max-width: 1200px;
@@ -292,6 +307,31 @@ footer {
 }
 
 @media (max-width: 767px) {
+    
+    .menu-icon {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--cor-header-footer);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    .menu a {
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #menu-toggle:checked + .menu-icon + .menu {
+        display: flex;
+    }
 
     .listas-container {
         flex-direction: column;
