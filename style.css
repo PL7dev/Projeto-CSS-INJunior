@@ -6,12 +6,12 @@
 }
 
 :root {
-    --cor-fundo: #f0f0f0;
-    --cor-card: #ffffff;
-    --cor-texto: #333333;
-    --cor-header-footer: #4CAF50;
-    --cor-botao: #008CBA;
-    --cor-botao-hover: #005f73;
+    --cor-fundo: #0f172a;          /* azul bem escuro */
+    --cor-card: #020617;           /* quase preto */
+    --cor-texto: #e5e7eb;          /* cinza claro */
+    --cor-header-footer: #020617;  /* igual ao card */
+    --cor-botao: #3b82f6;          /* azul tech */
+    --cor-botao-hover: #2563eb;
     --espacamento: 20px;
 }
 
@@ -292,13 +292,16 @@ footer {
     background-color: var(--cor-botao-hover);
 }
 
+footer .redes-sociais img {
+    filter: invert(1) brightness(1.1);
+}
+
 @media (min-width: 768px) {
 
     .secao-perfil {
         flex-direction: row;
         align-items: flex-start;
         text-align: left;
-        background-color: var(--cor-card);
     }
 
     .grupo-lista {
