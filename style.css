@@ -343,19 +343,21 @@ footer {
         gap: 30px;
     }
 
-    .grupo-lista h2 {
-        text-align: center;
+    .grupo-lista:first-child h2,
+    .grupo-lista:last-child h2 {
+        text-align: left;
     }
 
     .grupo-lista ul,
     .grupo-lista ol {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 10px;
     }
 
     .grupo-lista li {
-        width: 45%;
-        height: 110px;
+        width: 28%;
+        height: 160px;
     }
 
     footer {
