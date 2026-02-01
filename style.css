@@ -50,7 +50,7 @@ header a:hover {
 }
 
 main {
-    padding: var(--espacamento);  /* EDITAR AQ PARA FAZER 2 CORES*/
+    padding: var(--espacamento);
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -101,7 +101,8 @@ main {
     text-align: left;
 }
 
-.grupo-lista ul, .grupo-lista ol {
+.grupo-lista ul,
+.grupo-lista ol {
     display: flex;
     flex-wrap: nowrap;
     gap: 15px;
@@ -129,20 +130,15 @@ main {
     position: absolute;
     top: 8px;
     left: 8px;
-
     width: 28px;
     height: 28px;
-
     background-color: rgba(0,0,0,0.6);
     color: #fff;
-
     font-weight: bold;
     font-size: 0.9rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 50%;
     z-index: 2;
 }
@@ -164,17 +160,13 @@ main {
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    transition: 
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-    z-index: 1;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .img-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
     transition: transform 0.35s ease, filter 0.35s ease;
 }
 
@@ -196,11 +188,10 @@ form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-left: 0;
-    width: 100%;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
     padding: 15px;
     background-color: var(--cor-card);
@@ -217,7 +208,6 @@ form button {
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
 }
 
 form button:hover {
@@ -238,35 +228,25 @@ footer {
 }
 
 .redes-sociais a {
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    transition: transform 0.2s ease;
 }
 
-.redes-sociais a img {
+.redes-sociais img {
     width: 30px;
     height: 30px;
-    object-fit: contain;
-}
-
-.redes-sociais a:hover {
-    transform: translateY(-3px);
 }
 
 .btn-contato {
-    align-self: flex-end;
     padding: 8px 16px;
     background-color: var(--cor-botao);
-    border: none;
     border-radius: 5px;
-    color: black;
     font-weight: bold;
+    color: var(--cor-texto);
     text-decoration: none;
-    cursor: pointer;
-    transition: background 0.3s;
 }
 
 .btn-contato:hover {
@@ -274,25 +254,6 @@ footer {
 }
 
 @media (min-width: 768px) {
-    body {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "header"
-            "content"
-            "footer";
-    }
-
-    header {
-        grid-area: header;
-        background-color: var(--cor-header-footer); 
-        justify-content: flex-end; 
-    }
-
-    main {
-        grid-area: content;
-        padding: 40px; /* EDITAR AQ PARA FAZER 2 CORES*/
-    }
 
     .secao-perfil {
         flex-direction: row;
@@ -301,16 +262,48 @@ footer {
         background-color: var(--cor-card);
     }
 
-    .listas-container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
     .grupo-lista {
         width: 48%;
     }
+}
+
+@media (max-width: 767px) {
+
+    .listas-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .grupo-lista h2 {
+        text-align: center;
+    }
+
+    .grupo-lista ul,
+    .grupo-lista ol {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .grupo-lista li {
+        width: 45%;
+        height: 110px;
+    }
 
     footer {
-        grid-area: footer;
+        flex-direction: column;
+        gap: 14px;
+        padding: 16px 20px;
+    }
+
+    .redes-sociais {
+        justify-content: center;
+    }
+
+    .btn-contato {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        padding: 12px 0;
+        font-size: 1rem;
     }
 }
